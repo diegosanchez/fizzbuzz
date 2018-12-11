@@ -4,13 +4,15 @@ type Tellers struct {
 }
 
 func NewTellers() *Tellers {
-	return new(Tellers)
+	result := new(Tellers)
+
+	return result
 }
 
 func (t *Tellers) say(number int) string {
-	if number == 3 {
-		return "Fizz"
-	}
+	teller := NewDefaultTeller(number)
 
-	return string(number)
+	teller = teller.oust(NewThreeTeller(number))
+
+	return teller.say()
 }
