@@ -14,3 +14,9 @@ func TestNumberTellerSayOne(t *testing.T) {
 
 	assert.Equal(t, string(1), teller.say(1))
 }
+
+func TestNumberTellerSayTwo(t *testing.T) {
+	teller := NewTeller()
+
+	assert.Equal(t, string(2), teller.say(2))
+}
