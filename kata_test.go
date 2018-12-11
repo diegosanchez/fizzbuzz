@@ -10,13 +10,19 @@ func TestHelloWorld(t *testing.T) {
 }
 
 func TestNumberTellerSayOne(t *testing.T) {
-	teller := NewTeller()
+	teller := NewTellers()
 
 	assert.Equal(t, string(1), teller.say(1))
 }
 
 func TestNumberTellerSayTwo(t *testing.T) {
-	teller := NewTeller()
+	teller := NewTellers()
 
 	assert.Equal(t, string(2), teller.say(2))
+}
+
+func TestNumberTellerSayTres(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, "Fizz", teller.say(3))
 }
