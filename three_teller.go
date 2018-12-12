@@ -11,7 +11,12 @@ func NewThreeTeller(number int) Teller {
 }
 
 func (t *ThreeTeller) oust(another Teller) Teller {
-	return t
+	if t.number == 3 {
+		return t
+	}
+
+	return another
+
 }
 
 func (t *ThreeTeller) say() string {
