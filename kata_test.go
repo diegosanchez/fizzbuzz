@@ -50,3 +50,9 @@ func TestNumberTellerSaySiete(t *testing.T) {
 
 	assert.Equal(t, string(7), teller.say(7))
 }
+
+func TestNumberTellerSayOcho(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, string(8), teller.say(8))
+}
