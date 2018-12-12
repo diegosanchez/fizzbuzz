@@ -10,6 +10,10 @@ func NewDefaultTeller(number int) Teller {
 	return result
 }
 
+func (d *DefaultTeller) isDivisible() bool {
+	return true
+}
+
 func (d *DefaultTeller) oust(another Teller) Teller {
 	return another
 }

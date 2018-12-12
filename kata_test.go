@@ -92,3 +92,9 @@ func TestNumberTellerSayCatorce(t *testing.T) {
 
 	assert.Equal(t, string(14), teller.say(14))
 }
+
+func TestNumberTellerSayQuince(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, "FizzBuzz", teller.say(15))
+}

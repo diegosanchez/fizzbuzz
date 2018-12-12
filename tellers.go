@@ -12,6 +12,7 @@ func NewTellers() *Tellers {
 func (t *Tellers) say(number int) string {
 	teller := NewDefaultTeller(number)
 
+	teller = teller.oust(NewBothTeller(NewFiveTeller(number), NewThreeTeller(number)))
 	teller = teller.oust(NewThreeTeller(number))
 	teller = teller.oust(NewFiveTeller(number))
 
