@@ -10,8 +10,12 @@ func NewFiveTeller(number int) Teller {
 	return result
 }
 
+func (t *FiveTeller) isDivisible() bool {
+	return t.number%5 == 0
+}
+
 func (t *FiveTeller) oust(another Teller) Teller {
-	if t.number == 5 {
+	if t.isDivisible() {
 		return t
 	}
 
@@ -19,7 +23,7 @@ func (t *FiveTeller) oust(another Teller) Teller {
 }
 
 func (t *FiveTeller) say() string {
-	if t.number == 5 {
+	if t.isDivisible() {
 		return "Buzz"
 	}
 

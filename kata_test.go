@@ -42,7 +42,7 @@ func TestNumberTellerSayCinco(t *testing.T) {
 func TestNumberTellerSaySeis(t *testing.T) {
 	teller := NewTellers()
 
-	assert.Equal(t, string(6), teller.say(6))
+	assert.Equal(t, "Fizz", teller.say(6))
 }
 
 func TestNumberTellerSaySiete(t *testing.T) {
@@ -55,4 +55,10 @@ func TestNumberTellerSayOcho(t *testing.T) {
 	teller := NewTellers()
 
 	assert.Equal(t, string(8), teller.say(8))
+}
+
+func TestNumberTellerSayNueve(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, "Fizz", teller.say(9))
 }

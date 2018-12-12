@@ -10,8 +10,12 @@ func NewThreeTeller(number int) Teller {
 	return result
 }
 
+func (t *ThreeTeller) isDivisible() bool {
+	return t.number%3 == 0
+}
+
 func (t *ThreeTeller) oust(another Teller) Teller {
-	if t.number == 3 {
+	if t.isDivisible() {
 		return t
 	}
 
@@ -20,7 +24,7 @@ func (t *ThreeTeller) oust(another Teller) Teller {
 }
 
 func (t *ThreeTeller) say() string {
-	if t.number == 3 {
+	if t.isDivisible() {
 		return "Fizz"
 	}
 
