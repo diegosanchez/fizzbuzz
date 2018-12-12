@@ -24,9 +24,5 @@ func (t *ThreeTeller) oust(another Teller) Teller {
 }
 
 func (t *ThreeTeller) say() string {
-	if t.isDivisible() {
-		return "Fizz"
-	}
-
-	return NewDefaultTeller(t.number).say()
+	return "Fizz"
 }

@@ -62,3 +62,33 @@ func TestNumberTellerSayNueve(t *testing.T) {
 
 	assert.Equal(t, "Fizz", teller.say(9))
 }
+
+func TestNumberTellerSayDiez(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, "Buzz", teller.say(10))
+}
+
+func TestNumberTellerSayOnce(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, string(11), teller.say(11))
+}
+
+func TestNumberTellerSayDoce(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, "Fizz", teller.say(12))
+}
+
+func TestNumberTellerSayTrece(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, string(13), teller.say(13))
+}
+
+func TestNumberTellerSayCatorce(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, string(14), teller.say(14))
+}
