@@ -38,3 +38,9 @@ func TestNumberTellerSayCinco(t *testing.T) {
 
 	assert.Equal(t, "Buzz", teller.say(5))
 }
+
+func TestNumberTellerSaySeis(t *testing.T) {
+	teller := NewTellers()
+
+	assert.Equal(t, string(6), teller.say(6))
+}
